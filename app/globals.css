@@ -8,7 +8,10 @@
   --ink-faint: rgba(26,26,26,0.08);
 }
 
-html { scrollbar-width: none; }
+html {
+  scrollbar-width: none;
+  scroll-snap-type: y mandatory;
+}
 body {
   background: var(--bone);
   color: var(--ink);
@@ -116,6 +119,7 @@ body::-webkit-scrollbar { display: none; }
   text-align: center;
   padding: 4rem 2rem;
   padding-bottom: 6rem;
+  scroll-snap-align: center;
 }
 
 .p-short { min-height: 65vh; }
