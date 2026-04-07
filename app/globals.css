@@ -86,7 +86,7 @@ body::-webkit-scrollbar { display: none; }
 .ios-label {
   font-family: var(--font-inter);
   font-weight: 300;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   letter-spacing: 0.1em;
   color: var(--ink-light);
   margin-top: 0.5rem;
@@ -153,14 +153,14 @@ body::-webkit-scrollbar { display: none; }
 .day-label {
   font-family: var(--font-inter);
   font-weight: 300;
-  font-size: 0.5rem;
-  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
   color: var(--amber);
   margin-bottom: 1.5rem;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
-.day-label.visible { opacity: 0.6; }
+.day-label.visible { opacity: 0.7; }
 
 /* GONE STATE — crossed out, faded */
 .q-gone {
@@ -173,23 +173,23 @@ body::-webkit-scrollbar { display: none; }
 .gone-label {
   font-family: var(--font-inter);
   font-weight: 300;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   letter-spacing: 0.2em;
   color: var(--amber);
   margin-top: 1.5rem;
   opacity: 0;
   transition: opacity 1.5s ease 0.4s;
 }
-.gone-label.visible { opacity: 0.6; }
+.gone-label.visible { opacity: 0.7; }
 
 /* SECONDARY TEXT */
 .s {
   font-family: var(--font-inter);
   font-weight: 300;
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
   color: var(--ink-light);
-  line-height: 1.9;
+  line-height: 2;
   margin-top: 1.5rem;
   opacity: 0;
   transition: opacity 1.5s ease 0.4s;
