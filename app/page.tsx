@@ -45,9 +45,9 @@ export default function Home() {
         {/* OPENER */}
         <div className="p">
           <p className="q" data-reveal>
-            i wish i could hear
+            the question
             <br />
-            his voice one more time.
+            you&apos;ve been avoiding.
           </p>
         </div>
 
