@@ -76,17 +76,21 @@ export default function Home() {
             )}
           </div>
           <p className="s" data-reveal>
-            your children don&apos;t want to read your answers.
+            your children don&apos;t want
+            <br />
+            to read your answers.
             <br />
             they want to hear them.
           </p>
         </div>
 
-        {/* DAY 1 — the question fills the page */}
+        {/* DAY 1 */}
         <div className="p">
           <span className="day-label" data-reveal>day 1</span>
           <p className="q-question" data-reveal>
-            What have you pretended not to want?
+            What have you pretended
+            <br />
+            not to want?
           </p>
         </div>
 
@@ -94,7 +98,11 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 13</span>
           <p className="q-question" data-reveal>
-            What did your father teach you without saying a word?
+            What did your father
+            <br />
+            teach you without
+            <br />
+            saying a word?
           </p>
         </div>
 
@@ -102,7 +110,11 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 22</span>
           <p className="q-question q-gone" data-reveal>
-            What are you holding that you could put down today?
+            What are you holding
+            <br />
+            that you could
+            <br />
+            put down today?
           </p>
           <span className="gone-label" data-reveal>gone.</span>
         </div>
@@ -111,7 +123,11 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 30</span>
           <p className="q-question" data-reveal>
-            If this were your last answer, what would you need someone to know?
+            If this were your last answer,
+            <br />
+            what would you need
+            <br />
+            someone to know?
           </p>
         </div>
 
@@ -127,7 +143,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* CLOSER */}
+        {/* CLOSER — this is the last panel. nothing after. */}
         <div className="p">
           <p className="q" data-reveal>
             you&apos;re still alive.
@@ -135,10 +151,6 @@ export default function Home() {
             say something.
           </p>
         </div>
-
-        <footer className="ft">
-          <p>a mirror with a timer and a microphone</p>
-        </footer>
       </div>
 
       <div className="fixed-footer">
