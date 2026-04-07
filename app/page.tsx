@@ -41,23 +41,8 @@ export default function Home() {
       <div className="wm">empical</div>
       <div className="dot" ref={dotRef} />
 
-      <div className="wave">
-        <svg
-          viewBox="0 0 900 80"
-          preserveAspectRatio="none"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,40 Q20,40 40,38 T80,32 T120,40 T160,28 T200,42 T240,24 T280,40 T320,34 T360,44 T400,26 T440,40 T480,38 T520,30 T560,42 T600,26 T640,38 T680,40 T720,32 T760,42 T800,36 T840,40 T900,40"
-            stroke="var(--amber)"
-            strokeWidth="1"
-            fill="none"
-          />
-        </svg>
-      </div>
-
       <div className="content">
+        {/* OPENER */}
         <div className="p">
           <p className="q" data-reveal>
             i wish i could hear
@@ -66,6 +51,7 @@ export default function Home() {
           </p>
         </div>
 
+        {/* WHAT IT IS */}
         <div className="p">
           <p className="q" data-reveal>
             one question a day.
@@ -76,6 +62,7 @@ export default function Home() {
           </p>
         </div>
 
+        {/* THE VOICE MOMENT */}
         <div className="p p-short">
           <div className="wf" data-reveal>
             {[0, 0.15, 0.3, 0.1, 0.22, 0.35, 0.08, 0.25, 0.18, 0.32].map(
@@ -95,35 +82,40 @@ export default function Home() {
           </p>
         </div>
 
+        {/* DAY 1 — the question fills the page */}
         <div className="p">
-          <div className="card" data-reveal>
-            <div className="card-day">day 1</div>
-            <div className="card-q">
-              What have you pretended not to want?
-            </div>
-          </div>
-          <div className="card" data-reveal>
-            <div className="card-day">day 13</div>
-            <div className="card-q">
-              What did your father teach you without saying a word?
-            </div>
-          </div>
-          <div className="card card-gone" data-reveal>
-            <div className="card-day">day 22</div>
-            <div className="card-q">
-              What are you holding that you could put down today?
-            </div>
-            <div className="card-gone-label">gone.</div>
-          </div>
-          <div className="card" data-reveal>
-            <div className="card-day">day 30</div>
-            <div className="card-q">
-              If this were your last answer, what would you need someone to
-              know?
-            </div>
-          </div>
+          <span className="day-label" data-reveal>day 1</span>
+          <p className="q-question" data-reveal>
+            What have you pretended not to want?
+          </p>
         </div>
 
+        {/* DAY 13 */}
+        <div className="p">
+          <span className="day-label" data-reveal>day 13</span>
+          <p className="q-question" data-reveal>
+            What did your father teach you without saying a word?
+          </p>
+        </div>
+
+        {/* DAY 22 — gone */}
+        <div className="p">
+          <span className="day-label" data-reveal>day 22</span>
+          <p className="q-question q-gone" data-reveal>
+            What are you holding that you could put down today?
+          </p>
+          <span className="gone-label" data-reveal>gone.</span>
+        </div>
+
+        {/* DAY 30 */}
+        <div className="p">
+          <span className="day-label" data-reveal>day 30</span>
+          <p className="q-question" data-reveal>
+            If this were your last answer, what would you need someone to know?
+          </p>
+        </div>
+
+        {/* THE PORTRAIT */}
         <div className="p">
           <p className="q" data-reveal>
             after 30 days,
@@ -135,23 +127,23 @@ export default function Home() {
           </p>
         </div>
 
+        {/* CLOSER */}
         <div className="p">
           <p className="q" data-reveal>
             you&apos;re still alive.
             <br />
             say something.
           </p>
-          <button className="btn" data-reveal>
-            get empical
-          </button>
-          <p className="ios-label" data-reveal>
-            ios. coming soon.
-          </p>
         </div>
 
         <footer className="ft">
           <p>a mirror with a timer and a microphone</p>
         </footer>
+      </div>
+
+      <div className="fixed-footer">
+        <button className="btn">get empical</button>
+        <span className="ios-label">ios. coming soon.</span>
       </div>
     </>
   );
