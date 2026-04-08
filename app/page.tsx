@@ -1,9 +1,31 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, FormEvent } from "react";
 
 export default function Home() {
   const dotRef = useRef<HTMLDivElement>(null);
+  const [formOpen, setFormOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!email || submitting) return;
+    setSubmitting(true);
+    try {
+      await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setSubmitted(true);
+    } catch {
+      // silent fail
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   useEffect(() => {
     const dot = dotRef.current;
@@ -154,8 +176,29 @@ export default function Home() {
       </div>
 
       <div className="fixed-footer">
-        <button className="btn">get empical</button>
-        <span className="ios-label">ios. coming soon.</span>
+        {submitted ? (
+          <span className="ios-label" style={{ opacity: 1 }}>you're in.</span>
+        ) : formOpen ? (
+          <form onSubmit={handleSubmit} className="waitlist-form">
+            <input
+              type="email"
+              placeholder="your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="waitlist-input"
+              autoFocus
+              required
+            />
+            <button type="submit" className="btn" style={{ opacity: 1 }} disabled={submitting}>
+              {submitting ? "..." : "join"}
+            </button>
+          </form>
+        ) : (
+          <>
+            <button className="btn" onClick={() => setFormOpen(true)}>get empical</button>
+            <span className="ios-label">ios. coming soon.</span>
+          </>
+        )}
       </div>
     </>
   );
