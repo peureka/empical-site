@@ -76,11 +76,11 @@ export default function Home() {
         {/* WHAT IT IS */}
         <div className="p">
           <p className="q" data-reveal>
-            one question a day.
+            one question.
             <br />
             hold to speak.
             <br />
-            miss it and it&apos;s gone.
+            hear your month.
           </p>
         </div>
 
