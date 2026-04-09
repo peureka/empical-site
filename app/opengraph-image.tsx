@@ -45,7 +45,7 @@ export default async function OGImage() {
             marginBottom: 40,
           }}
         >
-          what did your father teach you without saying a word?
+          what are you pretending isn't bothering you?
         </div>
         <div
           style={{

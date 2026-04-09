@@ -67,9 +67,9 @@ export default function Home() {
         {/* OPENER */}
         <div className="p">
           <p className="q" data-reveal>
-            the question
+            the opposite of
             <br />
-            you&apos;ve been avoiding.
+            morning pages.
           </p>
         </div>
 
@@ -98,11 +98,11 @@ export default function Home() {
             )}
           </div>
           <p className="s" data-reveal>
-            your children don&apos;t want
+            you bought the notebook.
             <br />
-            to read your answers.
+            you quit on day four.
             <br />
-            they want to hear them.
+            empical is for the rest of us.
           </p>
         </div>
 
@@ -120,11 +120,11 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 13</span>
           <p className="q-question" data-reveal>
-            what did your father
+            whose voice do you hear
             <br />
-            teach you without
+            in your head when you&apos;re about
             <br />
-            saying a word?
+            to do something embarrassing?
           </p>
         </div>
 
@@ -158,13 +158,21 @@ export default function Home() {
           <p className="q" data-reveal>
             after 30 days,
             <br />
-            you hear it all back.
+            you hear your month.
           </p>
           <p className="s" data-reveal>
             your voice. your pauses. the days you missed.
           </p>
           <div className="card-preview" data-reveal>
             <div className="card-days">30 days.</div>
+            <div className="card-strip">
+              {Array.from({ length: 30 }, (_, i) => (
+                <span
+                  key={i}
+                  className={[3, 8, 17, 22].includes(i) ? "card-mark empty" : "card-mark"}
+                />
+              ))}
+            </div>
             <div className="card-duration">14 minutes, 22 seconds of you.</div>
             <div className="card-wm">empical</div>
           </div>

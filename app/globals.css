@@ -337,3 +337,20 @@ body::-webkit-scrollbar { display: none; }
   letter-spacing: 0.2em;
   margin-top: 1.5rem;
 }
+.card-strip {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 1rem 0 1.25rem;
+}
+.card-mark {
+  display: inline-block;
+  width: 8px;
+  height: 2px;
+  background: var(--text);
+}
+.card-mark.empty {
+  background: transparent;
+  border: 1px solid var(--secondary);
+  height: 0;
+}
