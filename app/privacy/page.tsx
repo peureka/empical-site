@@ -82,7 +82,7 @@ export default function Privacy() {
       </p>
 
       <p style={{ marginBottom: "3rem" }}>
-        if you have questions, email petereureka@gmail.com.
+        if you have questions, email hello@empical.com.
       </p>
 
       <p style={{ color: "#5C5753", fontSize: "0.7rem" }}>
