@@ -1,26 +1,10 @@
 import type { Metadata } from "next";
-import { Newsreader, Inter } from "next/font/google";
 import "./globals.css";
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  weight: "300",
-  style: "italic",
-  variable: "--font-newsreader",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const siteUrl = "https://empical.com";
 const title = "empical";
 const description =
-  "one question a day. speak your answer. miss it and it's gone.";
+  "one question a day. hold to speak. miss it and it's gone.";
 
 export const metadata: Metadata = {
   title,
@@ -42,8 +26,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: siteUrl },
   other: {
-    "theme-color": "#F5F0EB",
-    "msapplication-TileColor": "#F5F0EB",
+    "theme-color": "#0F0F0F",
+    "msapplication-TileColor": "#0F0F0F",
   },
 };
 
@@ -53,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${inter.variable}`}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

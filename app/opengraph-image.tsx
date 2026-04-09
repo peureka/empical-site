@@ -3,16 +3,19 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const runtime = "nodejs";
-export const alt = "empical — one question a day. speak your answer. miss it and it's gone.";
+export const alt = "empical — one question a day. hold to speak. miss it and it's gone.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OGImage() {
-  const newsreaderData = await readFile(
-    join(process.cwd(), "public/fonts/Newsreader-LightItalic.ttf")
+  const canelaData = await readFile(
+    join(process.cwd(), "public/fonts/Canela-RegularItalic.otf")
   );
-  const interData = await readFile(
-    join(process.cwd(), "public/fonts/Inter-Light.ttf")
+  const sohneData = await readFile(
+    join(process.cwd(), "public/fonts/Sohne-Buch.otf")
+  );
+  const monoData = await readFile(
+    join(process.cwd(), "public/fonts/SohneMono-Buch.otf")
   );
 
   return new ImageResponse(
@@ -21,7 +24,7 @@ export default async function OGImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#F5F0EB",
+          background: "#0F0F0F",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -31,25 +34,25 @@ export default async function OGImage() {
       >
         <div
           style={{
-            fontFamily: "Newsreader",
-            fontWeight: 300,
+            fontFamily: "Canela",
+            fontWeight: 400,
             fontStyle: "italic",
             fontSize: 42,
             lineHeight: 1.7,
-            color: "#1A1A1A",
+            color: "#C4622D",
             textAlign: "center",
             maxWidth: 700,
             marginBottom: 40,
           }}
         >
-          What did your father teach you without saying a word?
+          what did your father teach you without saying a word?
         </div>
         <div
           style={{
-            fontFamily: "Inter",
-            fontWeight: 300,
-            fontSize: 16,
-            color: "rgba(26,26,26,0.35)",
+            fontFamily: "Sohne Mono",
+            fontWeight: 400,
+            fontSize: 14,
+            color: "#5C5753",
             letterSpacing: "0.12em",
             marginBottom: 40,
           }}
@@ -60,16 +63,16 @@ export default async function OGImage() {
           style={{
             width: 30,
             height: 1,
-            background: "#C4841D",
+            background: "#C4622D",
             marginBottom: 24,
           }}
         />
         <div
           style={{
-            fontFamily: "Inter",
-            fontWeight: 300,
+            fontFamily: "Sohne Mono",
+            fontWeight: 400,
             fontSize: 13,
-            color: "#1A1A1A",
+            color: "#9A9590",
             letterSpacing: "0.35em",
           }}
         >
@@ -81,15 +84,21 @@ export default async function OGImage() {
       ...size,
       fonts: [
         {
-          name: "Newsreader",
-          data: newsreaderData,
-          weight: 300,
+          name: "Canela",
+          data: canelaData,
+          weight: 400,
           style: "italic",
         },
         {
-          name: "Inter",
-          data: interData,
-          weight: 300,
+          name: "Sohne",
+          data: sohneData,
+          weight: 400,
+          style: "normal",
+        },
+        {
+          name: "Sohne Mono",
+          data: monoData,
+          weight: 400,
           style: "normal",
         },
       ],

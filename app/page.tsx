@@ -21,7 +21,7 @@ export default function Home() {
       });
       setSubmitted(true);
     } catch {
-      // silent fail
+      // silent
     } finally {
       setSubmitting(false);
     }
@@ -78,7 +78,7 @@ export default function Home() {
           <p className="q" data-reveal>
             one question a day.
             <br />
-            speak your answer.
+            hold to speak.
             <br />
             miss it and it&apos;s gone.
           </p>
@@ -110,9 +110,9 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 1</span>
           <p className="q-question" data-reveal>
-            What have you pretended
+            what are you pretending
             <br />
-            not to want?
+            isn&apos;t bothering you?
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 13</span>
           <p className="q-question" data-reveal>
-            What did your father
+            what did your father
             <br />
             teach you without
             <br />
@@ -132,11 +132,11 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 22</span>
           <p className="q-question q-gone" data-reveal>
-            What are you holding
+            what&apos;s the smallest thing
             <br />
-            that you could
+            you&apos;re carrying that you
             <br />
-            put down today?
+            could put down?
           </p>
           <span className="gone-label" data-reveal>gone.</span>
         </div>
@@ -145,7 +145,7 @@ export default function Home() {
         <div className="p">
           <span className="day-label" data-reveal>day 30</span>
           <p className="q-question" data-reveal>
-            If this were your last answer,
+            if this were your last answer,
             <br />
             what would you need
             <br />
@@ -153,19 +153,48 @@ export default function Home() {
           </p>
         </div>
 
-        {/* THE PORTRAIT */}
+        {/* THE PLAYBACK */}
         <div className="p">
           <p className="q" data-reveal>
             after 30 days,
             <br />
-            hear yourself whole.
+            you hear it all back.
           </p>
           <p className="s" data-reveal>
-            your voice. your pauses. yours.
+            your voice. your pauses. the days you missed.
+          </p>
+          <div className="card-preview" data-reveal>
+            <div className="card-days">30 days.</div>
+            <div className="card-duration">14 minutes, 22 seconds of you.</div>
+            <div className="card-wm">empical</div>
+          </div>
+        </div>
+
+        {/* THE DEAL */}
+        <div className="p">
+          <p className="q" data-reveal>
+            first 30 days free.
+            <br />
+            then one payment.
+            <br />
+            yours forever.
+          </p>
+          <p className="price" data-reveal>$38</p>
+          <p className="price-note" data-reveal>no subscription. no renewal. no tricks.</p>
+        </div>
+
+        {/* THE ANTI-FEATURE LIST */}
+        <div className="p p-short">
+          <p className="s" data-reveal>
+            no ai. no cloud. no account.
+            <br />
+            no streaks. no analytics. no sharing of audio.
+            <br />
+            everything stays on your phone.
           </p>
         </div>
 
-        {/* CLOSER — this is the last panel. nothing after. */}
+        {/* CLOSER */}
         <div className="p">
           <p className="q" data-reveal>
             you&apos;re still alive.
@@ -177,7 +206,7 @@ export default function Home() {
 
       <div className="fixed-footer">
         {submitted ? (
-          <span className="ios-label" style={{ opacity: 1 }}>you're in.</span>
+          <span className="ios-label" style={{ opacity: 1 }}>you&apos;re in.</span>
         ) : formOpen ? (
           <form onSubmit={handleSubmit} className="waitlist-form">
             <input

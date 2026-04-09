@@ -6,8 +6,8 @@ export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
 export default async function Icon() {
-  const newsreaderData = await readFile(
-    join(process.cwd(), "public/fonts/Newsreader-LightItalic.ttf")
+  const canelaData = await readFile(
+    join(process.cwd(), "public/fonts/Canela-RegularItalic.otf")
   );
 
   return new ImageResponse(
@@ -16,7 +16,7 @@ export default async function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#1A1A1A",
+          background: "#0F0F0F",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -25,11 +25,11 @@ export default async function Icon() {
       >
         <div
           style={{
-            fontFamily: "Newsreader",
-            fontWeight: 300,
+            fontFamily: "Canela",
+            fontWeight: 400,
             fontStyle: "italic",
             fontSize: 20,
-            color: "#F5F0EB",
+            color: "#E8E4DE",
             marginTop: -2,
           }}
         >
@@ -41,9 +41,9 @@ export default async function Icon() {
       ...size,
       fonts: [
         {
-          name: "Newsreader",
-          data: newsreaderData,
-          weight: 300,
+          name: "Canela",
+          data: canelaData,
+          weight: 400,
           style: "italic",
         },
       ],

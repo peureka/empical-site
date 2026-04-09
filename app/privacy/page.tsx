@@ -10,12 +10,12 @@ export default function Privacy() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#F5F0EB",
-        color: "#1A1A1A",
+        background: "#0F0F0F",
+        color: "#E8E4DE",
         padding: "4rem 2rem",
         maxWidth: 600,
         margin: "0 auto",
-        fontFamily: "var(--font-inter)",
+        fontFamily: "Sohne, -apple-system, Helvetica, sans-serif",
         fontSize: "0.85rem",
         lineHeight: 2,
         letterSpacing: "0.02em",
@@ -23,21 +23,22 @@ export default function Privacy() {
     >
       <h1
         style={{
-          fontFamily: "var(--font-inter)",
-          fontWeight: 300,
-          fontSize: "0.65rem",
+          fontFamily: "Sohne Mono, SF Mono, monospace",
+          fontWeight: 400,
+          fontSize: "0.6rem",
           letterSpacing: "0.35em",
+          color: "#9A9590",
           marginBottom: "3rem",
         }}
       >
         empical
       </h1>
 
-      <h2 style={{ fontWeight: 300, fontSize: "1rem", marginBottom: "1.5rem" }}>
+      <h2 style={{ fontWeight: 400, fontSize: "1rem", marginBottom: "1.5rem" }}>
         privacy policy
       </h2>
 
-      <p style={{ marginBottom: "1.5rem", color: "rgba(26,26,26,0.6)" }}>
+      <p style={{ marginBottom: "1.5rem", color: "#5C5753" }}>
         effective april 2026
       </p>
 
@@ -46,10 +47,9 @@ export default function Privacy() {
       </p>
 
       <p style={{ marginBottom: "1.5rem" }}>
-        your recordings, your answers, and your archive are stored locally on
-        your device using on-device storage. empical has no server. no account.
-        no cloud. no database. we cannot access your data because it does not
-        exist anywhere except your phone.
+        your recordings and your answers are stored locally on your device.
+        empical has no server. no account. no cloud. no database. we cannot
+        access your data because it does not exist anywhere except your phone.
       </p>
 
       <p style={{ marginBottom: "1.5rem" }}>
@@ -58,8 +58,9 @@ export default function Privacy() {
       </p>
 
       <p style={{ marginBottom: "1.5rem" }}>
-        the share feature exports the question as an image. it never exports
-        your answer or your voice.
+        the only thing you can share is a completion card after your 30-day
+        playback. it contains no audio, no quotes, and no personal data — only
+        the duration of your recordings.
       </p>
 
       <p style={{ marginBottom: "1.5rem" }}>
@@ -84,8 +85,8 @@ export default function Privacy() {
         if you have questions, email petereureka@gmail.com.
       </p>
 
-      <p style={{ color: "rgba(26,26,26,0.15)", fontSize: "0.7rem" }}>
-        a mirror with a timer and a microphone
+      <p style={{ color: "#5C5753", fontSize: "0.7rem" }}>
+        a voice ritual. not a wellness app.
       </p>
     </div>
   );
